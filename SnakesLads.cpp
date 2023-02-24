@@ -82,10 +82,11 @@ bool takeTurn(int player, int& position, char board[], int ladders[][2], int sna
 
 
     if ((position +roll) > SIZE) {
-        cout << "\nPlayer " << player<< " rolled over the board! \n Try again on the next turn" << endl;
+        cout << "\nPlayer " << player<< " rolled a " << roll << " and went over the board!";
+        cout << "\nPlayer " << player<< " will stay on square " << position << endl;
     } else {
         position += roll;
-        cout << "\nPlayer " << player << " rolled a " << roll << " and landed on block " << position << endl;
+        cout << "\nPlayer " << player << " rolled a " << roll << " and landed on square " << position << endl;
 
         if (position == SIZE) {
             cout << "Player " << player << " wins!" << endl;
@@ -111,7 +112,7 @@ bool takeTurn(int player, int& position, char board[], int ladders[][2], int sna
             }
         }
 
-        cout << "Player " << player << " has now moved to block " << position << endl;
+        cout << "Player " << player << " has now moved to square " << position << endl;
 
     }
 
@@ -158,5 +159,3 @@ void printBoard(int players[], char board[], int ladders[][2], int snakes[][2]) 
         }
 
 }
-
-
